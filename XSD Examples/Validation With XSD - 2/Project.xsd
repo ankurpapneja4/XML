@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema  xmlns:xs ="http://www.w3.org/2001/XMLSchema"
+            xmlns           = "http://www.example.org/POM"
+            targetNamespace = "http://www.example.org/POM">
+  
+            <!-- Define ROOT element using the "project" complexType-->
+            <xs:element name="project" type="Project"/>
+
+            <!-- Defina a complexType called "Project"-->
+            <xs:complexType name="Project">
+              <xs:sequence>
+                  <xs:element name="modelVersion" type="xs:string"/>
+                  <xs:element name="artifactId"   type="xs:string"/>
+                  <xs:element name="groupId"      type="xs:string"/>
+                  <xs:element name="version"      type="xs:string"/>
+                  <xs:element name="java-version" type="xs:decimal"/>
+              </xs:sequence>
+            </xs:complexType>
+</xs:schema>
