@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.example.com/Patient"
+           xmlns="http://www.example.com/Patient"
+           elementFormDefault="qualified">
+
+    <xs:complexType name="Patient">
+        <xs:sequence>
+          <xs:element name="name" type="xs:string"/>
+          <xs:element name="age" type="xs:integer"/>
+          <xs:element name="email" type="xs:string"/>
+          <xs:element name="gender" type="xs:string"/>
+          <xs:element name="phone" type="xs:string" minOccurs="0" maxOccurs="3" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="patient" type="Patient" />
+
+</xs:schema>
